@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    RED.nodes.registerType('authSA',{
+        category: 'CCAPI',
+        color: '#2573b3',
+        icon: "./images/GCP_Logo.png",
+        credentials: {
+            keyFilePath: {type: "text"},
+            scopes: {type: "text"}
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function() { return this.name||"authSA"; }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="authSA">
+    <div class="form-row">
+         <label for="node-input-keyFilePath"><i class="fa fa-users"></i> json keyfile path</label>
+         <input type="text" id="node-input-keyFilePath" placeholder="default">
+     </div>
+     <div class="form-row">
+          <label for="node-input-scopes"><i class="fa fa-users"></i> Google Scopes</label>
+          <input type="text" id="node-input-scopes" placeholder="default">
+     </div>
+</script>
+
+<script type="text/x-red" data-help-name="authSA">
+    <p>Provides a token using Google Service Accont login with given <code>keyfile</code> and <code>scopes</code>.</p>
+</script>

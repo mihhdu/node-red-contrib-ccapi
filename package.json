@@ -1,0 +1,19 @@
+{
+  "name": "node-red-contrib-ccapi",
+  "version": "1.0.0",
+  "description": "A login node for Google Service Account",
+  "dependencies": {
+    "gtoken": "2.3.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mihai dunareanu",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "authSA": "authSA.js"
+    }
+  }
+}
